@@ -1,0 +1,6 @@
+<domanins>
+	<domain id="apptimes" merge="replace" type="xml">
+		<default path="classpath*:/config/apptimes.xml" />
+		<extend path="file://${user.home}/apptimes/apptimes.xml" />
+	</domain>
+</domanins>

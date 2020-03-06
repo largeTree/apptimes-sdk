@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tb>
+	<url>http://tkapi.apptimes.cn</url>
+	<appKey>xxx</appKey>
+	<appSecret>xxx</appSecret>
+	<default>
+		<pid>xxx</pid>
+	</default>
+</tb>
