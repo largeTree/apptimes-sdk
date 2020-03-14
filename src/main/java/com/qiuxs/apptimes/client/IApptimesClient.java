@@ -23,6 +23,6 @@ public interface IApptimesClient {
 	 * @param request
 	 * @return
 	 */
-	public <REQ extends BaseRequest<RES>, RES extends BaseResponse> RES execute(REQ request);
+	public <REQ extends BaseRequest<RES>, RES extends BaseResponse<?>> RES execute(REQ req);
 
 }

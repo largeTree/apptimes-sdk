@@ -11,7 +11,7 @@ import java.io.Serializable;
  * @author qiuxs   
  * @version 1.0.0
  */
-public class BaseResponse implements Serializable {
+public class BaseResponse<D> implements Serializable {
 
 	private static final long serialVersionUID = 2181999160084389994L;
 
@@ -19,6 +19,8 @@ public class BaseResponse implements Serializable {
 	private int errcode;
 	/** 状态信息 */
 	private String errmsg;
+	/** 返回数据 */
+	private D data;
 
 	public int getErrcode() {
 		return errcode;
@@ -34,6 +36,14 @@ public class BaseResponse implements Serializable {
 
 	public void setErrmsg(String errmsg) {
 		this.errmsg = errmsg;
+	}
+
+	public D getData() {
+		return data;
+	}
+
+	public void setData(D data) {
+		this.data = data;
 	}
 
 }

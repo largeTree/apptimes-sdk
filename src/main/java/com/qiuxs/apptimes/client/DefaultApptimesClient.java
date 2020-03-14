@@ -2,6 +2,7 @@ package com.qiuxs.apptimes.client;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,6 +16,7 @@ import com.qiuxs.apptimes.request.BaseRequest;
 import com.qiuxs.apptimes.request.anno.ApiField;
 import com.qiuxs.apptimes.request.anno.ApptimesApi;
 import com.qiuxs.apptimes.response.BaseResponse;
+import com.qiuxs.cuteframework.core.basic.utils.DateFormatUtils;
 import com.qiuxs.cuteframework.core.basic.utils.JsonUtils;
 import com.qiuxs.cuteframework.core.basic.utils.StringUtils;
 import com.qiuxs.cuteframework.core.basic.utils.generator.RandomGenerator;
@@ -42,7 +44,7 @@ public class DefaultApptimesClient implements IApptimesClient {
 	}
 
 	@Override
-	public <REQ extends BaseRequest<RES>, RES extends BaseResponse> RES execute(REQ request) {
+	public <REQ extends BaseRequest<RES>, RES extends BaseResponse<?>> RES execute(REQ request) {
 		if (request == null) {
 			throw new ApptimesApiException(0, "Request is null");
 		}
@@ -63,7 +65,7 @@ public class DefaultApptimesClient implements IApptimesClient {
 		
 		long startNano = System.nanoTime();
 		// 返回结果
-		JSONObject res = HttpClientUtil.doGetJSONObject(finalUrl, params);
+		JSONObject res = HttpClientUtil.doPostRetJson(finalUrl, params, false);
 		log.info(StringUtils.append("requestId = ", requestId, ", Call apptimes finished, costMs = ", ((System.nanoTime() - startNano) / 1000000), ", res = ", res.toJSONString()));
 		
 		// 结果检查
@@ -99,13 +101,28 @@ public class DefaultApptimesClient implements IApptimesClient {
 					val = this.getDefaultVal(fieldName);
 				}
 				if (val != null) {
-					params.put(fieldName, String.valueOf(val));
+					params.put(fieldName, this.formatVal(apiField, val));
 				}
 			} catch (ReflectiveOperationException e) {
 				log.warn("get Request Field val failed, ext = " + e.getLocalizedMessage(), e);
 			}
 		}
 		return params;
+	}
+	
+	/**
+	 * 格式化参数值
+	 *  
+	 * @author qiuxs  
+	 * @param apiField
+	 * @param val
+	 * @return
+	 */
+	private String formatVal(ApiField apiField, Object val) {
+		if (val instanceof Date) {
+			return DateFormatUtils.format((Date) val, apiField.format());
+		}
+		return String.valueOf(val);
 	}
 
 	/***
