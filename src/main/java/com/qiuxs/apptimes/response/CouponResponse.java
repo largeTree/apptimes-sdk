@@ -13,31 +13,10 @@ import java.util.Date;
  * @author qiuxs   
  * @version 1.0.0
  */
-public class CouponResponse extends BaseResponse {
+public class CouponResponse extends BaseResponse<CouponResponse.Coupon> {
 
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = -603631346551684459L;
-
-	/**  优惠券信息. */
-	private Coupon data;
-	
-	/**
-	 * Gets the 优惠券信息.
-	 *
-	 * @return the 优惠券信息
-	 */
-	public Coupon getData() {
-		return data;
-	}
-
-	/**
-	 * Sets the 优惠券信息.
-	 *
-	 * @param data the new 优惠券信息
-	 */
-	public void setData(Coupon data) {
-		this.data = data;
-	}
 
 	/**
 	 * The Class Coupon.
