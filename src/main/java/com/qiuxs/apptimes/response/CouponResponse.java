@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package com.qiuxs.apptimes.response;
 
 import java.io.Serializable;
@@ -13,49 +16,70 @@ import java.util.Date;
  * @author qiuxs   
  * @version 1.0.0
  */
-public class CouponResponse extends BaseResponse<CouponResponse.Coupon> {
+public class CouponResponse extends BaseResponse {
 
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = -603631346551684459L;
+
+	/**  优惠券数据. */
+	private Coupon data;
+
+	/**
+	 * Gets the 优惠券数据.
+	 *
+	 * @return the 优惠券数据
+	 */
+	public Coupon getData() {
+		return data;
+	}
+
+	/**
+	 * Sets the 优惠券数据.
+	 *
+	 * @param data the new 优惠券数据
+	 */
+	public void setData(Coupon data) {
+		this.data = data;
+	}
 
 	/**
 	 * The Class Coupon.
 	 */
 	public static class Coupon implements Serializable {
-		
+
 		/** The Constant serialVersionUID. */
 		private static final long serialVersionUID = -6356665392568047157L;
-		
+
 		/**  类别ID. */
 		private Long categoryId;
-		
+
 		/**  券+商品链接. */
 		private String couponClickUrl;
-		
+
 		/**  优惠券开始时间. */
 		private Date couponStartTime;
-		
+
 		/**  优惠券结束时间. */
 		private Date couponEndTime;
-		
+
 		/**  优惠券信息. */
 		private String couponInfo;
-		
+
 		/**  优惠券总数. */
 		private Long couponTotalCount;
-		
+
 		/**  优惠券剩余数量. */
 		private Long couponRemainCount;
-		
+
 		/**  优惠券类型. */
 		private Integer couponType;
-		
+
 		/**  商品ID. */
 		private Long itemId;
-		
+
 		/**  商品链接. */
 		private String itemUrl;
-		
+
 		/**  最大佣金比例. */
 		private BigDecimal maxCommissionRate;
 

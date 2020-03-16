@@ -15,6 +15,7 @@ import com.qiuxs.apptimes.response.CouponResponse;
 import com.qiuxs.apptimes.response.OrderListResponse;
 import com.qiuxs.apptimes.response.PublisherTokenGetResponse;
 import com.qiuxs.apptimes.response.UserExpTimeResponse;
+import com.qiuxs.apptimes.response.dto.OrderData;
 import com.qiuxs.cuteframework.core.basic.utils.JsonUtils;
 
 /**
@@ -48,13 +49,16 @@ public class DefaultApptimesClientTest {
 	public void testOrderList() {
 		OrderListRequest req = new OrderListRequest();
 		Calendar cal = Calendar.getInstance();
-		Date endTime = cal.getTime();
-		cal.add(Calendar.HOUR, -3);
+		cal.add(Calendar.DAY_OF_YEAR, -90);
 		Date startTime = cal.getTime();
 		req.setStartTime(startTime);
+		cal.add(Calendar.HOUR_OF_DAY, 3);
+		Date endTime = cal.getTime();
 		req.setEndTime(endTime);
 		OrderListResponse resp = this.client.execute(req);
+		OrderData data = resp.getData();
 		System.out.println(JsonUtils.toJSONString(resp));
+		System.out.println(JsonUtils.toJSONString(data));
 	}
 	
 	@Test

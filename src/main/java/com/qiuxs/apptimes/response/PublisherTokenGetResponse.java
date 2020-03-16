@@ -3,10 +3,20 @@ package com.qiuxs.apptimes.response;
 /**
  * The Class PublisherTokenGetResponse.
  */
-public class PublisherTokenGetResponse extends BaseResponse<PublisherTokenGetResponse.Data> {
+public class PublisherTokenGetResponse extends BaseResponse {
 
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = 5236620593970446867L;
+
+	private Data data;
+	
+	public Data getData() {
+		return data;
+	}
+
+	public void setData(Data data) {
+		this.data = data;
+	}
 
 	public static class Data {
 		/**  用户授权url. */

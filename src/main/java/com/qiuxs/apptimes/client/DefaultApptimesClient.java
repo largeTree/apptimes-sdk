@@ -44,7 +44,7 @@ public class DefaultApptimesClient implements IApptimesClient {
 	}
 
 	@Override
-	public <REQ extends BaseRequest<RES>, RES extends BaseResponse<?>> RES execute(REQ request) {
+	public <REQ extends BaseRequest<RES>, RES extends BaseResponse> RES execute(REQ request) {
 		if (request == null) {
 			throw new ApptimesApiException(0, "Request is null");
 		}
@@ -71,10 +71,33 @@ public class DefaultApptimesClient implements IApptimesClient {
 		// 结果检查
 		this.checkSuccess(res);
 
+		// 数据处理
+		// this.handleData(request, res);
+		
 		// 转为指定类型返回
 		return JsonUtils.parseObject(res, ReflectUtils.getSuperClassGenricType(request.getClass(), 0));
 	}
 	
+	/**
+	 * 数据处理
+	 *  
+	 * @author qiuxs  
+	 * @param request
+	 * @param res
+	 */
+//	private void handleData(BaseRequest<?> request, JSONObject res) {
+//		String api = this.getApi(request);
+//		if ("order-list".equals(api)) {
+//			JSONObject data = res.getJSONObject("data");
+//			if (data != null) {
+//				String resultsStr = data.getString("results");
+//				if ("{}".equals(resultsStr)) {
+//					data.put("results", new JSONArray());
+//				}
+//			}
+//		}
+//	}
+
 	/**
 	 * 解析参数
 	 *  
@@ -159,13 +182,18 @@ public class DefaultApptimesClient implements IApptimesClient {
 	 * @return 
 	 */
 	private String buildFinalUrl(BaseRequest<?> request) {
-		// api定义
-		ApptimesApi apptimesApi = request.getClass().getAnnotation(ApptimesApi.class);
-		String path = apptimesApi.value();
+		String path = this.getApi(request);
 		if (!path.startsWith("/")) {
 			path = StringUtils.append("/", path);
 		}
 		return StringUtils.append(this.config.getUrl(), path);
+	}
+	
+	private String getApi(BaseRequest<?> request) {
+		// api定义
+		ApptimesApi apptimesApi = request.getClass().getAnnotation(ApptimesApi.class);
+		String path = apptimesApi.value();
+		return path;
 	}
 
 	private void checkSuccess(JSONObject res) {

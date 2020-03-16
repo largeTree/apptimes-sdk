@@ -8,7 +8,7 @@ package com.qiuxs.apptimes.response;
  * @author qiuxs   
  * @version 1.0.0
  */
-public class UserExpTimeResponse extends BaseResponse<Object> {
+public class UserExpTimeResponse extends BaseResponse {
 
 	private static final long serialVersionUID = -4056612906775270557L;
 
