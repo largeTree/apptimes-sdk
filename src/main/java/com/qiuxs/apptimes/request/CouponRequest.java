@@ -4,6 +4,7 @@ import com.qiuxs.apptimes.request.anno.ApiField;
 import com.qiuxs.apptimes.request.anno.ApptimesApi;
 import com.qiuxs.apptimes.response.CouponResponse;
 
+// TODO: Auto-generated Javadoc
 /**
  * 
  * 功能描述: <br/>  
@@ -25,6 +26,10 @@ public class CouponRequest extends BaseRequest<CouponResponse> {
 	/**  商品ID. */
 	@ApiField("good_id")
 	private Long goodId;
+	
+	/**  渠道ID. */
+	@ApiField("relation_id")
+	private Long relationId;
 
 	/**
 	 * Gets the pid: mm_xxxx_xxxx_xxxx.
@@ -60,6 +65,24 @@ public class CouponRequest extends BaseRequest<CouponResponse> {
 	 */
 	public void setGoodId(Long goodId) {
 		this.goodId = goodId;
+	}
+
+	/**
+	 * Gets the 渠道ID.
+	 *
+	 * @return the 渠道ID
+	 */
+	public Long getRelationId() {
+		return relationId;
+	}
+
+	/**
+	 * Sets the 渠道ID.
+	 *
+	 * @param relationId the new 渠道ID
+	 */
+	public void setRelationId(Long relationId) {
+		this.relationId = relationId;
 	}
 
 }
