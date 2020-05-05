@@ -1,5 +1,6 @@
 package com.qiuxs.apptimes.request;
 
+import com.qiuxs.apptimes.request.anno.ApiField;
 import com.qiuxs.apptimes.request.anno.ApptimesApi;
 import com.qiuxs.apptimes.response.IdToTokenResponse;
 
@@ -22,9 +23,11 @@ public class IdToTokenRequest extends BaseRequest<IdToTokenResponse> {
 	private String pid;
 	
 	/**  商品ID. */
+	@ApiField("good_id")
 	private Long goodId;
 	
 	/**  渠道ID. */
+	@ApiField("relation_id")
 	private Long relationId;
 
 	/**
