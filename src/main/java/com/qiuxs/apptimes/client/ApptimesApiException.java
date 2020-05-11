@@ -1,5 +1,7 @@
 package com.qiuxs.apptimes.client;
 
+import com.qiuxs.cuteframework.core.basic.code.annotation.Code;
+import com.qiuxs.cuteframework.core.basic.code.annotation.CodeDomain;
 import com.qiuxs.cuteframework.core.basic.utils.StringUtils;
 
 /**
@@ -14,16 +16,28 @@ import com.qiuxs.cuteframework.core.basic.utils.StringUtils;
 public class ApptimesApiException extends RuntimeException {
 
 	private static final long serialVersionUID = -6787025669989695339L;
+	
+	@CodeDomain
+	public static final String DOMAIN_ERROR_CODE = "apptimes.errorCode";
+	@Code(domain = DOMAIN_ERROR_CODE, caption = "非淘客商品")
+	public static final int CODE_NOT_TK_ITEM = 401;
 
-	private int errorCode;
+	private final int errorCode;
 
 	public ApptimesApiException(int errorCode, String msg) {
 		super(msg);
+		this.errorCode = errorCode;
 	}
 
 	public ApptimesApiException(String msg, Throwable cause) {
 		super(msg, cause);
+		this.errorCode = -1;
 	}
+	
+	public int getErrorCode() {
+		return this.errorCode;
+	};
+	
 
 	@Override
 	public String getLocalizedMessage() {

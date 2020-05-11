@@ -3,6 +3,7 @@ package com.qiuxs.apptimes.response;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+// TODO: Auto-generated Javadoc
 /**
  * 商品ID转淘口令接口
  * 功能描述: <p>  
@@ -80,7 +81,7 @@ public class IdToTokenResponse extends BaseResponse {
 		private BigDecimal commission;
 		
 		/**  佣金比例. */
-		private BigDecimal commission_rate;
+		private BigDecimal commissionRate;
 		
 		/**  优惠券地址. */
 		private String ulandUrl;
@@ -289,22 +290,23 @@ public class IdToTokenResponse extends BaseResponse {
 			this.commission = commission;
 		}
 
+		
 		/**
 		 * Gets the 佣金比例.
 		 *
 		 * @return the 佣金比例
 		 */
-		public BigDecimal getCommission_rate() {
-			return commission_rate;
+		public BigDecimal getCommissionRate() {
+			return commissionRate;
 		}
 
 		/**
 		 * Sets the 佣金比例.
 		 *
-		 * @param commission_rate the new 佣金比例
+		 * @param commissionRate the new 佣金比例
 		 */
-		public void setCommission_rate(BigDecimal commission_rate) {
-			this.commission_rate = commission_rate;
+		public void setCommissionRate(BigDecimal commissionRate) {
+			this.commissionRate = commissionRate;
 		}
 
 		/**
