@@ -42,7 +42,7 @@ public class TokenToTokenResponse extends BaseResponse {
 		private static final long serialVersionUID = -5302696260314677496L;
 
 		/**  商品ID. */
-		private String goodId;
+		private Long goodId;
 		
 		/**  商品标题. */
 		private String goodTitle;
@@ -76,7 +76,7 @@ public class TokenToTokenResponse extends BaseResponse {
 		 *
 		 * @return the 商品ID
 		 */
-		public String getGoodId() {
+		public Long getGoodId() {
 			return goodId;
 		}
 
@@ -85,7 +85,7 @@ public class TokenToTokenResponse extends BaseResponse {
 		 *
 		 * @param goodId the new 商品ID
 		 */
-		public void setGoodId(String goodId) {
+		public void setGoodId(Long goodId) {
 			this.goodId = goodId;
 		}
 
