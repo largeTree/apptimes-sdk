@@ -19,6 +19,8 @@ public class ApptimesApiException extends RuntimeException {
 	
 	@CodeDomain
 	public static final String DOMAIN_ERROR_CODE = "apptimes.errorCode";
+	@Code(domain = DOMAIN_ERROR_CODE, caption = "口令不存在")
+	public static final int CODE_TOKEN_NOT_EXISTS = 400;
 	@Code(domain = DOMAIN_ERROR_CODE, caption = "非淘客商品")
 	public static final int CODE_NOT_TK_ITEM = 401;
 
