@@ -4,6 +4,7 @@ import com.qiuxs.apptimes.request.anno.ApiField;
 import com.qiuxs.apptimes.request.anno.ApptimesApi;
 import com.qiuxs.apptimes.response.IdToTokenResponse;
 
+// TODO: Auto-generated Javadoc
 /**
  * 商品ID转淘口令接口
  * 功能描述: <p>  
@@ -29,6 +30,14 @@ public class IdToTokenRequest extends BaseRequest<IdToTokenResponse> {
 	/**  渠道ID. */
 	@ApiField("relation_id")
 	private Long relationId;
+	
+	/**  会员运营ID. */
+	@ApiField("special_id")
+	private Long specialId;
+	
+	/**  传给淘宝用来生成会员ID的东西. */
+	@ApiField("external_id")
+	private Long externalId;
 
 	/**
 	 * Gets the pid：mm_xxx_xxx_xxx.
@@ -82,6 +91,42 @@ public class IdToTokenRequest extends BaseRequest<IdToTokenResponse> {
 	 */
 	public void setRelationId(Long relationId) {
 		this.relationId = relationId;
+	}
+
+	/**
+	 * Gets the 会员运营ID.
+	 *
+	 * @return the 会员运营ID
+	 */
+	public Long getSpecialId() {
+		return specialId;
+	}
+
+	/**
+	 * Sets the 会员运营ID.
+	 *
+	 * @param specialId the new 会员运营ID
+	 */
+	public void setSpecialId(Long specialId) {
+		this.specialId = specialId;
+	}
+
+	/**
+	 * Gets the 传给淘宝用来生成会员ID的东西.
+	 *
+	 * @return the 传给淘宝用来生成会员ID的东西
+	 */
+	public Long getExternalId() {
+		return externalId;
+	}
+
+	/**
+	 * Sets the 传给淘宝用来生成会员ID的东西.
+	 *
+	 * @param externalId the new 传给淘宝用来生成会员ID的东西
+	 */
+	public void setExternalId(Long externalId) {
+		this.externalId = externalId;
 	}
 
 }

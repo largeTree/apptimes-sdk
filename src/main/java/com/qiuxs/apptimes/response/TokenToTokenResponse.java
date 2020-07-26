@@ -3,6 +3,7 @@ package com.qiuxs.apptimes.response;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+// TODO: Auto-generated Javadoc
 /**
  * 口令转口令响应数据
  * The Class TokenToTokenResponse.
@@ -64,6 +65,9 @@ public class TokenToTokenResponse extends BaseResponse {
 		
 		/**  佣金比例. */
 		private BigDecimal commissionRate;
+		
+		/**  最低佣金比率. */
+		private BigDecimal minCommissionRate;
 		
 		/**  券地址. */
 		private String ulandUrl;
@@ -249,6 +253,24 @@ public class TokenToTokenResponse extends BaseResponse {
 		 */
 		public void setToken(String token) {
 			this.token = token;
+		}
+
+		/**
+		 * Gets the 最低佣金比率.
+		 *
+		 * @return the 最低佣金比率
+		 */
+		public BigDecimal getMinCommissionRate() {
+			return minCommissionRate;
+		}
+
+		/**
+		 * Sets the 最低佣金比率.
+		 *
+		 * @param minCommissionRate the new 最低佣金比率
+		 */
+		public void setMinCommissionRate(BigDecimal minCommissionRate) {
+			this.minCommissionRate = minCommissionRate;
 		}
 
 	}

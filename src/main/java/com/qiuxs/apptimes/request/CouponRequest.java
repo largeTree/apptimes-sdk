@@ -30,6 +30,17 @@ public class CouponRequest extends BaseRequest<CouponResponse> {
 	/**  渠道ID. */
 	@ApiField("relation_id")
 	private Long relationId;
+	
+	/** 会员运营ID */
+	@ApiField("special_id")
+	private Long specialId;
+	
+	/**  淘宝客外部用户标记，如自身系统用户ID. */
+	@ApiField("external_id")
+	private Long externalId;
+	
+	/**  1:PC,2:无线. */
+	private Integer platform;
 
 	/**
 	 * Gets the pid: mm_xxxx_xxxx_xxxx.
@@ -83,6 +94,50 @@ public class CouponRequest extends BaseRequest<CouponResponse> {
 	 */
 	public void setRelationId(Long relationId) {
 		this.relationId = relationId;
+	}
+
+	public Long getSpecialId() {
+		return specialId;
+	}
+
+	public void setSpecialId(Long specialId) {
+		this.specialId = specialId;
+	}
+
+	/**
+	 * Gets the 淘宝客外部用户标记，如自身系统用户ID.
+	 *
+	 * @return the 淘宝客外部用户标记，如自身系统用户ID
+	 */
+	public Long getExternalId() {
+		return externalId;
+	}
+
+	/**
+	 * Sets the 淘宝客外部用户标记，如自身系统用户ID.
+	 *
+	 * @param externalId the new 淘宝客外部用户标记，如自身系统用户ID
+	 */
+	public void setExternalId(Long externalId) {
+		this.externalId = externalId;
+	}
+
+	/**
+	 * Gets the 1:PC,2:无线.
+	 *
+	 * @return the 1:PC,2:无线
+	 */
+	public Integer getPlatform() {
+		return platform;
+	}
+
+	/**
+	 * Sets the 1:PC,2:无线.
+	 *
+	 * @param platform the new 1:PC,2:无线
+	 */
+	public void setPlatform(Integer platform) {
+		this.platform = platform;
 	}
 
 }

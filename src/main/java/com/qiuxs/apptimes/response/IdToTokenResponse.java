@@ -83,6 +83,9 @@ public class IdToTokenResponse extends BaseResponse {
 		/**  佣金比例. */
 		private BigDecimal commissionRate;
 		
+		/**  最低佣金比率. */
+		private BigDecimal minCommissionRate;
+		
 		/**  优惠券地址. */
 		private String ulandUrl;
 		
@@ -291,6 +294,24 @@ public class IdToTokenResponse extends BaseResponse {
 		}
 
 		
+		/**
+		 * Gets the 最低佣金比率.
+		 *
+		 * @return the 最低佣金比率
+		 */
+		public BigDecimal getMinCommissionRate() {
+			return minCommissionRate;
+		}
+
+		/**
+		 * Sets the 最低佣金比率.
+		 *
+		 * @param minCommissionRate the new 最低佣金比率
+		 */
+		public void setMinCommissionRate(BigDecimal minCommissionRate) {
+			this.minCommissionRate = minCommissionRate;
+		}
+
 		/**
 		 * Gets the 佣金比例.
 		 *
