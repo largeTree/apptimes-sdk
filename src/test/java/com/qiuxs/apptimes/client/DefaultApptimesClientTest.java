@@ -44,6 +44,7 @@ public class DefaultApptimesClientTest {
 		req.setText("老铁授权");
 		req.setUrl("https%3A%2F%2Foauth.taobao.com%2Fauthorize%3Fresponse_type%3Dcode%26client_id%3D24738761%26redirect_uri%3Dhttp%3A%2F%2Fdev.api.5uzhe.com%2Fwxbot%2Ftb%2Fcallback.do%26state%3DdWlkPTkmZnJvbT10Yg%3D%3D%26view%3Dwap");
 		TaoPasswordCreateResponse resp = this.client.execute(req);
+		System.out.println(JsonUtils.toJSONString(resp));
 	}
 	
 	@Test

@@ -18,6 +18,9 @@ public class UrlToTokenResponse extends BaseResponse {
 	}
 
 	public static class Data implements Serializable {
+		
+		private static final long serialVersionUID = -6659698146852538319L;
+		
 		private BigDecimal commission;
 		private BigDecimal commissionRate;
 		private BigDecimal currentPrice;
