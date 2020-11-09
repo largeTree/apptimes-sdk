@@ -1,4 +1,4 @@
-package com.qiuxs.apptimes.config;
+package com.qiuxs.apptimes.base.config;
 
 import com.qiuxs.cuteframework.core.basic.config.UConfigUtils;
 import com.qiuxs.cuteframework.core.basic.utils.StringUtils;

@@ -1,34 +1,41 @@
-package com.qiuxs.apptimes.response;
+package com.qiuxs.apptimes.tb.response;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+import com.qiuxs.apptimes.base.response.BaseResponse;
+
 // TODO: Auto-generated Javadoc
 /**
- * 口令转口令响应数据
- * The Class TokenToTokenResponse.
+ * 商品ID转淘口令接口
+ * 功能描述: <p>  
+ * 新增原因: TODO<p>  
+ * 新增日期: 2020年5月5日 下午9:13:04 <p>  
+ *  
+ * @author qiuxs   
+ * @version 1.0.0
  */
-public class TokenToTokenResponse extends BaseResponse {
+public class IdToTokenResponse extends BaseResponse {
 
 	/** The Constant serialVersionUID. */
-	private static final long serialVersionUID = 1791937924178616438L;
+	private static final long serialVersionUID = -3728755308163205404L;
 
-	/**  返回数据. */
+	/** The data. */
 	private Data data;
 
 	/**
-	 * Gets the 返回数据.
+	 * Gets the data.
 	 *
-	 * @return the 返回数据
+	 * @return the data
 	 */
 	public Data getData() {
 		return data;
 	}
 
 	/**
-	 * Sets the 返回数据.
+	 * Sets the data.
 	 *
-	 * @param data the new 返回数据
+	 * @param data the new data
 	 */
 	public void setData(Data data) {
 		this.data = data;
@@ -39,8 +46,8 @@ public class TokenToTokenResponse extends BaseResponse {
 	 */
 	public static class Data implements Serializable {
 
-		/**    serialVersionUID:TODO. */
-		private static final long serialVersionUID = -5302696260314677496L;
+		/** The Constant serialVersionUID. */
+		private static final long serialVersionUID = -1223491045478080686L;
 
 		/**  商品ID. */
 		private Long goodId;
@@ -54,11 +61,23 @@ public class TokenToTokenResponse extends BaseResponse {
 		/**  原价. */
 		private BigDecimal originPrice;
 		
-		/**  券价值. */
+		/**  优惠券价值. */
 		private BigDecimal quanPrice;
 		
-		/**  现价，券后价. */
+		/**  当前价格. */
 		private BigDecimal currentPrice;
+		
+		/**  是否天某. */
+		private Integer isMall;
+		
+		/**  卖家ID. */
+		private Long sellerId;
+		
+		/**  销售数. */
+		private Integer sales;
+		
+		/**  店名. */
+		private String nick;
 		
 		/**  佣金比例. */
 		private BigDecimal commission;
@@ -69,10 +88,13 @@ public class TokenToTokenResponse extends BaseResponse {
 		/**  最低佣金比率. */
 		private BigDecimal minCommissionRate;
 		
-		/**  券地址. */
+		/**  优惠券地址. */
 		private String ulandUrl;
 		
-		/**  新口令. */
+		/**  商品地址. */
+		private String sclickUrl;
+		
+		/**  淘口令. */
 		private String token;
 
 		/**
@@ -148,39 +170,111 @@ public class TokenToTokenResponse extends BaseResponse {
 		}
 
 		/**
-		 * Gets the 券价值.
+		 * Gets the 优惠券价值.
 		 *
-		 * @return the 券价值
+		 * @return the 优惠券价值
 		 */
 		public BigDecimal getQuanPrice() {
 			return quanPrice;
 		}
 
 		/**
-		 * Sets the 券价值.
+		 * Sets the 优惠券价值.
 		 *
-		 * @param quanPrice the new 券价值
+		 * @param quanPrice the new 优惠券价值
 		 */
 		public void setQuanPrice(BigDecimal quanPrice) {
 			this.quanPrice = quanPrice;
 		}
 
 		/**
-		 * Gets the 现价，券后价.
+		 * Gets the 当前价格.
 		 *
-		 * @return the 现价，券后价
+		 * @return the 当前价格
 		 */
 		public BigDecimal getCurrentPrice() {
 			return currentPrice;
 		}
 
 		/**
-		 * Sets the 现价，券后价.
+		 * Sets the 当前价格.
 		 *
-		 * @param currentPrice the new 现价，券后价
+		 * @param currentPrice the new 当前价格
 		 */
 		public void setCurrentPrice(BigDecimal currentPrice) {
 			this.currentPrice = currentPrice;
+		}
+
+		/**
+		 * Gets the 是否天某.
+		 *
+		 * @return the 是否天某
+		 */
+		public Integer getIsMall() {
+			return isMall;
+		}
+
+		/**
+		 * Sets the 是否天某.
+		 *
+		 * @param isMall the new 是否天某
+		 */
+		public void setIsMall(Integer isMall) {
+			this.isMall = isMall;
+		}
+
+		/**
+		 * Gets the 卖家ID.
+		 *
+		 * @return the 卖家ID
+		 */
+		public Long getSellerId() {
+			return sellerId;
+		}
+
+		/**
+		 * Sets the 卖家ID.
+		 *
+		 * @param sellerId the new 卖家ID
+		 */
+		public void setSellerId(Long sellerId) {
+			this.sellerId = sellerId;
+		}
+
+		/**
+		 * Gets the 销售数.
+		 *
+		 * @return the 销售数
+		 */
+		public Integer getSales() {
+			return sales;
+		}
+
+		/**
+		 * Sets the 销售数.
+		 *
+		 * @param sales the new 销售数
+		 */
+		public void setSales(Integer sales) {
+			this.sales = sales;
+		}
+
+		/**
+		 * Gets the 店名.
+		 *
+		 * @return the 店名
+		 */
+		public String getNick() {
+			return nick;
+		}
+
+		/**
+		 * Sets the 店名.
+		 *
+		 * @param nick the new 店名
+		 */
+		public void setNick(String nick) {
+			this.nick = nick;
 		}
 
 		/**
@@ -199,6 +293,25 @@ public class TokenToTokenResponse extends BaseResponse {
 		 */
 		public void setCommission(BigDecimal commission) {
 			this.commission = commission;
+		}
+
+		
+		/**
+		 * Gets the 最低佣金比率.
+		 *
+		 * @return the 最低佣金比率
+		 */
+		public BigDecimal getMinCommissionRate() {
+			return minCommissionRate;
+		}
+
+		/**
+		 * Sets the 最低佣金比率.
+		 *
+		 * @param minCommissionRate the new 最低佣金比率
+		 */
+		public void setMinCommissionRate(BigDecimal minCommissionRate) {
+			this.minCommissionRate = minCommissionRate;
 		}
 
 		/**
@@ -220,59 +333,58 @@ public class TokenToTokenResponse extends BaseResponse {
 		}
 
 		/**
-		 * Gets the 券地址.
+		 * Gets the 优惠券地址.
 		 *
-		 * @return the 券地址
+		 * @return the 优惠券地址
 		 */
 		public String getUlandUrl() {
 			return ulandUrl;
 		}
 
 		/**
-		 * Sets the 券地址.
+		 * Sets the 优惠券地址.
 		 *
-		 * @param ulandUrl the new 券地址
+		 * @param ulandUrl the new 优惠券地址
 		 */
 		public void setUlandUrl(String ulandUrl) {
 			this.ulandUrl = ulandUrl;
 		}
 
 		/**
-		 * Gets the 新口令.
+		 * Gets the 商品地址.
 		 *
-		 * @return the 新口令
+		 * @return the 商品地址
+		 */
+		public String getSclickUrl() {
+			return sclickUrl;
+		}
+
+		/**
+		 * Sets the 商品地址.
+		 *
+		 * @param sclickUrl the new 商品地址
+		 */
+		public void setSclickUrl(String sclickUrl) {
+			this.sclickUrl = sclickUrl;
+		}
+
+		/**
+		 * Gets the 淘口令.
+		 *
+		 * @return the 淘口令
 		 */
 		public String getToken() {
 			return token;
 		}
 
 		/**
-		 * Sets the 新口令.
+		 * Sets the 淘口令.
 		 *
-		 * @param token the new 新口令
+		 * @param token the new 淘口令
 		 */
 		public void setToken(String token) {
 			this.token = token;
 		}
-
-		/**
-		 * Gets the 最低佣金比率.
-		 *
-		 * @return the 最低佣金比率
-		 */
-		public BigDecimal getMinCommissionRate() {
-			return minCommissionRate;
-		}
-
-		/**
-		 * Sets the 最低佣金比率.
-		 *
-		 * @param minCommissionRate the new 最低佣金比率
-		 */
-		public void setMinCommissionRate(BigDecimal minCommissionRate) {
-			this.minCommissionRate = minCommissionRate;
-		}
-
 	}
 
 }

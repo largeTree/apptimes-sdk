@@ -1,10 +1,11 @@
-package com.qiuxs.apptimes.request;
+package com.qiuxs.apptimes.tb.request;
 
 import java.util.Date;
 
-import com.qiuxs.apptimes.request.anno.ApiField;
-import com.qiuxs.apptimes.request.anno.ApptimesApi;
-import com.qiuxs.apptimes.response.OrderListResponse;
+import com.qiuxs.apptimes.base.request.BaseRequest;
+import com.qiuxs.apptimes.base.request.anno.ApiField;
+import com.qiuxs.apptimes.base.request.anno.ApptimesApi;
+import com.qiuxs.apptimes.tb.response.OrderListResponse;
 import com.qiuxs.cuteframework.core.basic.utils.DateFormatUtils;
 
 /**

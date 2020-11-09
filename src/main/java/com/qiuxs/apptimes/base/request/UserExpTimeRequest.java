@@ -1,7 +1,7 @@
-package com.qiuxs.apptimes.request;
+package com.qiuxs.apptimes.base.request;
 
-import com.qiuxs.apptimes.request.anno.ApptimesApi;
-import com.qiuxs.apptimes.response.UserExpTimeResponse;
+import com.qiuxs.apptimes.base.request.anno.ApptimesApi;
+import com.qiuxs.apptimes.base.response.UserExpTimeResponse;
 
 /**
  * 功能描述: 查询授权有效期请求类 <br/>  

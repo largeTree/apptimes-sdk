@@ -1,4 +1,6 @@
-package com.qiuxs.apptimes.response;
+package com.qiuxs.apptimes.tb.response;
+
+import com.qiuxs.apptimes.base.response.BaseResponse;
 
 /**
  * The Class PublisherTokenGetResponse.

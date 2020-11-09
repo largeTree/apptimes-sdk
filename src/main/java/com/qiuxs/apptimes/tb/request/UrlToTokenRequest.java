@@ -1,8 +1,9 @@
-package com.qiuxs.apptimes.request;
+package com.qiuxs.apptimes.tb.request;
 
-import com.qiuxs.apptimes.request.anno.ApiField;
-import com.qiuxs.apptimes.request.anno.ApptimesApi;
-import com.qiuxs.apptimes.response.UrlToTokenResponse;
+import com.qiuxs.apptimes.base.request.BaseRequest;
+import com.qiuxs.apptimes.base.request.anno.ApiField;
+import com.qiuxs.apptimes.base.request.anno.ApptimesApi;
+import com.qiuxs.apptimes.tb.response.UrlToTokenResponse;
 
 @ApptimesApi("convert/url-to-token")
 public class UrlToTokenRequest extends BaseRequest<UrlToTokenResponse> {

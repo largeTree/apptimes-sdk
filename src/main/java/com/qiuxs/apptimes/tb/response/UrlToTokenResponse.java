@@ -1,7 +1,9 @@
-package com.qiuxs.apptimes.response;
+package com.qiuxs.apptimes.tb.response;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+
+import com.qiuxs.apptimes.base.response.BaseResponse;
 
 public class UrlToTokenResponse extends BaseResponse {
 

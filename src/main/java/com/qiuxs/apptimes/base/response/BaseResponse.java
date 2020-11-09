@@ -1,4 +1,4 @@
-package com.qiuxs.apptimes.response;
+package com.qiuxs.apptimes.base.response;
 
 import java.io.Serializable;
 

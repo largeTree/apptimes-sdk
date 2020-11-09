@@ -1,4 +1,4 @@
-package com.qiuxs.apptimes.response;
+package com.qiuxs.apptimes.base.response;
 
 /**
  * 功能描述: 查询授权有效期响应类<br/>  

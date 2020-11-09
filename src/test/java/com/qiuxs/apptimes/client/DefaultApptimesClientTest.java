@@ -6,18 +6,18 @@ import java.util.Date;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.qiuxs.apptimes.config.UConfigClientConfig;
-import com.qiuxs.apptimes.request.CouponRequest;
-import com.qiuxs.apptimes.request.OrderListRequest;
-import com.qiuxs.apptimes.request.PublisherTokenGetRequest;
-import com.qiuxs.apptimes.request.TaoPasswordCreateRequest;
-import com.qiuxs.apptimes.request.UserExpTimeRequest;
-import com.qiuxs.apptimes.response.CouponResponse;
-import com.qiuxs.apptimes.response.OrderListResponse;
-import com.qiuxs.apptimes.response.PublisherTokenGetResponse;
-import com.qiuxs.apptimes.response.TaoPasswordCreateResponse;
-import com.qiuxs.apptimes.response.UserExpTimeResponse;
-import com.qiuxs.apptimes.response.dto.OrderData;
+import com.qiuxs.apptimes.base.config.UConfigClientConfig;
+import com.qiuxs.apptimes.base.request.UserExpTimeRequest;
+import com.qiuxs.apptimes.base.response.UserExpTimeResponse;
+import com.qiuxs.apptimes.tb.request.CouponRequest;
+import com.qiuxs.apptimes.tb.request.OrderListRequest;
+import com.qiuxs.apptimes.tb.request.PublisherTokenGetRequest;
+import com.qiuxs.apptimes.tb.request.TaoPasswordCreateRequest;
+import com.qiuxs.apptimes.tb.response.CouponResponse;
+import com.qiuxs.apptimes.tb.response.OrderListResponse;
+import com.qiuxs.apptimes.tb.response.PublisherTokenGetResponse;
+import com.qiuxs.apptimes.tb.response.TaoPasswordCreateResponse;
+import com.qiuxs.apptimes.tb.response.dto.OrderData;
 import com.qiuxs.cuteframework.core.basic.utils.JsonUtils;
 
 /**

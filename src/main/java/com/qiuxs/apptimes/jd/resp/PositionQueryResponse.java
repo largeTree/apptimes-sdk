@@ -3,7 +3,7 @@ package com.qiuxs.apptimes.jd.resp;
 import java.io.Serializable;
 import java.util.List;
 
-import com.qiuxs.apptimes.response.BaseResponse;
+import com.qiuxs.apptimes.base.response.BaseResponse;
 
 // TODO: Auto-generated Javadoc
 /**

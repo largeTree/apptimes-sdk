@@ -1,4 +1,4 @@
-package com.qiuxs.apptimes.response.dto;
+package com.qiuxs.apptimes.tb.response.dto;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

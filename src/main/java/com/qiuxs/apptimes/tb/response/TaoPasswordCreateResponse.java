@@ -1,6 +1,8 @@
-package com.qiuxs.apptimes.response;
+package com.qiuxs.apptimes.tb.response;
 
 import java.io.Serializable;
+
+import com.qiuxs.apptimes.base.response.BaseResponse;
 
 /**
  * The Class TaoPasswordCreateResponse.

@@ -1,8 +1,8 @@
 package com.qiuxs.apptimes.jd.req;
 
+import com.qiuxs.apptimes.base.request.BaseRequest;
+import com.qiuxs.apptimes.base.request.anno.ApptimesApi;
 import com.qiuxs.apptimes.jd.resp.PositionCreateResponse;
-import com.qiuxs.apptimes.request.BaseRequest;
-import com.qiuxs.apptimes.request.anno.ApptimesApi;
 
 // TODO: Auto-generated Javadoc
 /**

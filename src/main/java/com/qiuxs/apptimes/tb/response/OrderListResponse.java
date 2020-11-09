@@ -1,6 +1,7 @@
-package com.qiuxs.apptimes.response;
+package com.qiuxs.apptimes.tb.response;
 
-import com.qiuxs.apptimes.response.dto.OrderData;
+import com.qiuxs.apptimes.base.response.BaseResponse;
+import com.qiuxs.apptimes.tb.response.dto.OrderData;
 
 /**
  * The Class OrderListResponse.

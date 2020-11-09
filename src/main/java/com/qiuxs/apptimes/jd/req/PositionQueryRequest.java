@@ -1,8 +1,8 @@
 package com.qiuxs.apptimes.jd.req;
 
+import com.qiuxs.apptimes.base.request.BaseRequest;
+import com.qiuxs.apptimes.base.request.anno.ApptimesApi;
 import com.qiuxs.apptimes.jd.resp.PositionQueryResponse;
-import com.qiuxs.apptimes.request.BaseRequest;
-import com.qiuxs.apptimes.request.anno.ApptimesApi;
 
 @ApptimesApi("jd-union/position-query")
 public class PositionQueryRequest extends BaseRequest<PositionQueryResponse> {

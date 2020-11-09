@@ -1,4 +1,4 @@
-package com.qiuxs.apptimes.config;
+package com.qiuxs.apptimes.base.config;
 
 import java.io.Serializable;
 

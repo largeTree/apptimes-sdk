@@ -1,8 +1,8 @@
-package com.qiuxs.apptimes.request;
+package com.qiuxs.apptimes.base.request;
 
 import java.io.Serializable;
 
-import com.qiuxs.apptimes.response.BaseResponse;
+import com.qiuxs.apptimes.base.response.BaseResponse;
 
 /**
  * 

@@ -1,7 +1,7 @@
 package com.qiuxs.apptimes.client;
 
-import com.qiuxs.apptimes.request.BaseRequest;
-import com.qiuxs.apptimes.response.BaseResponse;
+import com.qiuxs.apptimes.base.request.BaseRequest;
+import com.qiuxs.apptimes.base.response.BaseResponse;
 
 /**
  * 

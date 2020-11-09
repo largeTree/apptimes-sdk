@@ -1,7 +1,8 @@
-package com.qiuxs.apptimes.request;
+package com.qiuxs.apptimes.tb.request;
 
-import com.qiuxs.apptimes.request.anno.ApptimesApi;
-import com.qiuxs.apptimes.response.PublisherTokenGetResponse;
+import com.qiuxs.apptimes.base.request.BaseRequest;
+import com.qiuxs.apptimes.base.request.anno.ApptimesApi;
+import com.qiuxs.apptimes.tb.response.PublisherTokenGetResponse;
 
 /**
  * The Class PublisherTokenGetRequest.
