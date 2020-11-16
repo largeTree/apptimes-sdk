@@ -54,7 +54,7 @@ public class DefaultApptimesClient implements IApptimesClient {
 
 		// 转为map参数
 		Map<String, String> params = this.parseRequest(request);
-
+		
 		// 构造地址
 		String finalUrl = this.buildFinalUrl(request);
 		
@@ -120,9 +120,10 @@ public class DefaultApptimesClient implements IApptimesClient {
 			}
 			try {
 				Object val = f.get(req);
-				if (val == null) {
-					val = this.getDefaultVal(fieldName);
-				}
+				// 不设置默认值、无法区分淘宝京东等不同平台
+//				if (val == null) {
+//					val = this.getDefaultVal(fieldName);
+//				}
 				if (val != null) {
 					params.put(fieldName, this.formatVal(apiField, val));
 				}
@@ -155,9 +156,9 @@ public class DefaultApptimesClient implements IApptimesClient {
 	 * @param fieldName
 	 * @return
 	 */
-	private Object getDefaultVal(String fieldName) {
-		return this.config.getDefaultParams(fieldName);
-	}
+//	private Object getDefaultVal(String fieldName) {
+//		return this.config.getDefaultParams(fieldName);
+//	}
 
 	/**
 	 * 初始化请求
